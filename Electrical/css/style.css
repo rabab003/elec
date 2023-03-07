@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    --main-color:#ef8f65;
+}
+
+.container{
+    height:100vh;
+}
+.container .first h1{
+    font-size:90px;
+}
+.container .first h2{
+    font-weight:100;
+}
+.container .first p{
+    font-style:italic;
+}
+
+.button{
+    background:var(--main-color);
+    color:white;
+    border:none;
+    transition:.5s;
+}
+.button:hover{
+    background:white;
+    border:2px solid var(--main-color);
+    color:var(--main-color);
+}
+
+img{
+    max-width:100%;
+}
+.images{
+    position:relative;
+}
+
+
+
+@media screen and (min-width: 800px) {
+   .images::before{
+    position:absolute;
+    content:'';
+    width:70%;
+    height:100%;
+    background:var(--main-color);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:-2;
+}
+.container{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.container .first h1{
+    font-size:90px;
+}
+.container .first h2{
+    font-weight:100;
+}
+.container .first p{
+    font-style:italic;
+}
+
+.images{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.imagess{
+margin:10px;
+}
+
+.imagess img{
+margin:14px;
+}
+}
+
+@media screen and (max-width: 799px) {
+.images::before{
+    position:absolute;
+    content:'';
+    width:70%;
+    height:100%;
+    background:var(--main-color);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:-2;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top:50px;
+}
+.container .first h1{
+    font-size:70px;
+}
+.images{
+display:flex;
+align-items:center;
+justify-content:center;
+margin:50px;
+width:100%;
+}
+.imagess{
+    margin:10px;
+}
+
+.imagess img{ 
+margin:10px;
+}
+}
+
+@media screen and (max-width: 450px) {
+.images::before{
+    position:absolute;
+    content:'';
+    width:70%;
+    height:50%;
+    background:var(--main-color);
+    top:52%;
+    left:75%;
+    transform:translate(-50%,-50%);
+    z-index:-2;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  
+    margin-top:50px;
+}
+.container .first h1{
+    font-size:70px;
+}
+.images{
+  display:flex;
+    flex-direction: column;
+    align-items:center;
+width:100%;
+}
+.imagess{
+    margin:10px;
+}
+
+.imagess img{ 
+margin:10px;
+}
+}
